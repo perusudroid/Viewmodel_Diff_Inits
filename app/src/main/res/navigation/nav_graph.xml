@@ -8,28 +8,28 @@
     <fragment
         android:id="@+id/oneFragment"
         android:name="com.perusu.vm_pro.features.by.ByExOneFragment"
-        android:label="one_fragment"
+        android:label="Send Data"
         tools:layout="@layout/one_fragment" />
 
     <fragment
         android:id="@+id/twoFragment"
         android:name="com.perusu.vm_pro.features.by.ByExTwoFragment"
-        android:label="two_fragment"
+        android:label="Return Data"
         tools:layout="@layout/two_fragment" />
 
     <fragment
         android:id="@+id/obExFragment"
         android:name="com.perusu.vm_pro.features.obtain.ObExFragment"
-        android:label="ObExFragment" />
+        android:label="Obtain ViewModel" />
     <fragment
         android:id="@+id/byRepoFragment"
         android:name="com.perusu.vm_pro.features.byRepo.ByRepoFragment"
-        android:label="ByRepoFragment" />
+        android:label="ByViewModels Repo" />
     <fragment
         android:id="@+id/sampleFragment"
         android:name="com.perusu.vm_pro.features.SampleFragment"
-        android:label="fragment_sample"
-        tools:layout="@layout/fragment_sample" >
+        android:label="Home"
+        tools:layout="@layout/fragment_sample">
         <action
             android:id="@+id/action_sampleFragment_to_oneFragment"
             app:destination="@id/oneFragment" />
@@ -39,6 +39,13 @@
         <action
             android:id="@+id/action_sampleFragment_to_byRepoFragment"
             app:destination="@id/byRepoFragment" />
+        <action
+            android:id="@+id/action_sampleFragment_to_flowEmitFragment"
+            app:destination="@id/flowEmitFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/flowEmitFragment"
+        android:name="com.perusu.vm_pro.features.flowEmit.FlowEmitFragment"
+        android:label="Flow Emit" />
 
 </navigation>

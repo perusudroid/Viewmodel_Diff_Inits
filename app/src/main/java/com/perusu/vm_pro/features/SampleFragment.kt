@@ -24,17 +24,21 @@ class SampleFragment : Fragment() {
 
         view.findViewById<RecyclerView>(R.id.recyclerSample).adapter =
             ListAdapter(
-                listOf("Obtain ViewModel", "By ViewModels", "By ViewModels Repo"),
+                listOf("Obtain ViewModel", "By ViewModels", "By ViewModels Repo", "Flow Emit"),
                 onItemClicked
             )
     }
 
     private val onItemClicked: (Int) -> Unit = {
-        when (it) {
-            0 -> findNavController().navigate(R.id.action_sampleFragment_to_obExFragment)
-            1 -> findNavController().navigate(R.id.action_sampleFragment_to_oneFragment)
-            2 -> findNavController().navigate(R.id.action_sampleFragment_to_byRepoFragment)
+        with(findNavController()) {
+            when (it) {
+                0 -> navigate(R.id.action_sampleFragment_to_obExFragment)
+                1 -> navigate(R.id.action_sampleFragment_to_oneFragment)
+                2 -> navigate(R.id.action_sampleFragment_to_byRepoFragment)
+                3 -> navigate(R.id.action_sampleFragment_to_flowEmitFragment)
+            }
         }
+
     }
 
 

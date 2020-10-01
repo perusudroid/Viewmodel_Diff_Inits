@@ -40,6 +40,7 @@ class ListAdapter(val itemList: List<String>, val onItemClicked: (Int) -> Unit) 
                     0 -> "Usual way of obtaining ViewModel"
                     1 -> "Share data between views"
                     2 -> "Obtaining ViewModel using extension"
+                    3 -> "Observe Flow Emitted data"
                     else -> ""
                 }
             }
